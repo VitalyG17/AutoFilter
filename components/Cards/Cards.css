@@ -1,0 +1,113 @@
+:root {
+  --secondary-text: #8b959e;
+  --text-main: #252525;
+}
+
+.cards-container {
+  display: grid;
+  grid-gap: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 800px;
+  margin: 5% auto;
+}
+
+.cards-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 8px;
+  width: 392px;
+  height: 464px;
+  background: #FFFF;
+  padding: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cards-element__img {
+  width: 100%;
+  height: 250px;
+  /* background-color: aqua; */
+  object-fit: contain;
+}
+
+.cards-element__type {
+  font-size: 14px;
+  color: var(--secondary-text);
+  font-weight: 400;
+  line-height: 150%;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.cards-element__name {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+.cards-element__sub-info {
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+  padding-bottom: 26px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+}
+
+.cards-element__sub-info * {
+  background: rgba(168, 176, 184, 0.167);
+  border-radius: 4px;
+  padding: 2px 8px;
+  width: auto;
+  height: 28px;
+}
+
+.cards-element__yearProd {
+}
+
+.cards-element__weight {
+}
+
+.cards-element__mileage {
+  
+}
+
+.cards-element__location {
+  padding-top: 15px;
+  display: flex; 
+  gap: 10px;
+  align-items: center; 
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  max-width: 200px;
+  color: var(--secondary-text);
+}
+
+.cards-element__price {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 120%;
+  text-align: end;
+}
+
+.cards-element__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  position: relative;
+}
+
+.cards-element__details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #E8E9E8;
+}
