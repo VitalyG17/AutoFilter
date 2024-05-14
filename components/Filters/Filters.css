@@ -1,0 +1,253 @@
+.filter-container {
+  display: flex;
+  max-width: 300px;
+  background: var(--full-white);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-accordion__title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 24px;
+  cursor: pointer;
+  color: var(--text-main);
+  border-bottom: 1px solid #e8e9e8;
+}
+
+.menu-accordion label {
+  cursor: pointer;
+}
+
+.menu-accordion__item:last-child .accordion__title {
+  border-bottom: none !important;
+}
+
+.menu-accordion__title span {
+  padding-right: 12px;
+}
+
+.accordion__content {
+  padding: 0 25px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+  opacity: 0;
+  max-height: 0;
+  visibility: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordion__content.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Цена */
+.price-filter {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-filter input[type='number'] {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 80px;
+  height: 36px;
+  color: var(--acent-green);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.inputs{
+  border: 2px solid var(--form);
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.price-filter-price__label {
+  align-items: center;
+  padding: 10px 0 10px 5px;
+}
+
+.price-filter-price__label:last-of-type {
+  padding-left: 14px;
+}
+
+.price-filter-price__label:first-child{
+  padding-left: 15px;
+}
+
+#priceFrom{
+  border-right: 2px solid var(--form);
+}
+
+.range-slider {
+  display: flex;
+  margin: 15px 0;
+  position: relative;
+  height: 5px;
+  background: var(--form);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.range-slider__progres {
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  background: var(--acent-green);
+}
+
+.range-slider input[type='range'] {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  -webkit-appearance: none;
+  pointer-events: none;
+  background: none;
+  outline: none;
+}
+
+.range-slider input::-webkit-slider-thumb {
+  pointer-events: auto;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--acent-green);
+  border-radius: 50%;
+}
+
+/* Тип транспорта */
+.accordion__content #type {
+  border: none;
+  outline: none;
+  width: 240px;
+  height: 48px;
+  padding: 10px;
+  border: 2px solid var(--form);
+  color: var(--secondary-text);
+  font-weight: 400;
+  font-size: 14px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Чекбоксы */
+.accordion__content fieldset {
+  max-height: 200px;
+}
+
+.accordion__content fieldset input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.accordion__content fieldset label {
+  color: var(--secondary-text);
+  vertical-align: middle;
+  line-height: 1;
+}
+
+input[type="checkbox"]:checked + label {
+  color: var(--acent-green);
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.accordion__content fieldset input[type="checkbox"]::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  border: 2px solid var(--secondary-text);
+  background-color: var(--full-white);
+  margin-right: 12px;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.accordion__content fieldset input[type="checkbox"]:checked::before {
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: var(--acent-green);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+fieldset {
+  border: none;
+  overflow-y: auto;
+}
+
+/* Скроллбар */
+fieldset::-webkit-scrollbar-thumb {
+  background-color: var(--acent-green);
+  border-radius: 1px;
+}
+
+fieldset::-webkit-scrollbar {
+  width: 4px;
+  height: 60px;
+  border-radius: 1px;
+  background-color: #00966158;
+}
+
+/* Страна местонахождения */
+.accordion__content #country {
+  border: none;
+  outline: none;
+  width: 240px;
+  height: 48px;
+  padding: 10px;
+  border: 2px solid var(--form);
+  color: var(--secondary-text);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Кнопка применить */
+.container__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+}
+
+#applyFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin-bottom: 15px;
+  width: 233px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  cursor: pointer;
+  background: var(--acent-green);
+  color: var(--full-white);
+}
+
+#applyFilters:hover {
+  background: #018a5a;
+  transition: 0.4s;
+}

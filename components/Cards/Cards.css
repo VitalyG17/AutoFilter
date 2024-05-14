@@ -1,23 +1,18 @@
-:root {
-  --secondary-text: #8b959e;
-  --text-main: #252525;
-}
-
 .cards-container {
   display: grid;
   grid-gap: 45px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  max-width: 800px;
-  margin: 5% auto;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  max-width: 1000px;
+  padding-bottom: 2%;
 }
 
 .cards-element {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: column; 
+  justify-content: flex-end; 
   border-radius: 8px;
-  width: 392px;
-  height: 464px;
+  width: 390px;
+  height: auto;
   background: #FFFF;
   padding: 15px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,8 +20,7 @@
 
 .cards-element__img {
   width: 100%;
-  height: 250px;
-  /* background-color: aqua; */
+  height: auto;
   object-fit: contain;
 }
 
@@ -62,16 +56,6 @@
   padding: 2px 8px;
   width: auto;
   height: 28px;
-}
-
-.cards-element__yearProd {
-}
-
-.cards-element__weight {
-}
-
-.cards-element__mileage {
-  
 }
 
 .cards-element__location {
@@ -110,4 +94,35 @@
   width: 100%;
   height: 1px;
   background-color: #E8E9E8;
+}
+
+/* Button show */
+.button-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  width: 177px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  cursor: pointer;
+  background: var(--acent-green);
+  color: var(--full-white);
+}
+
+.show-more:hover {
+  background: #018a5a;
+  transition: 0.4s;
 }
